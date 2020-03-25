@@ -256,7 +256,7 @@ h1 {
 /* Add and remove via js to things that move. It is removed to prevent unwanted animations on zoom or page resize. */
 .transitionTransform {
 	will-change: transform;
-	transition: transform 1000ms ease-in-out;
+	transition: transform 200ms ease-in-out;
 }
 
 /* Most media queries are handled in JS. This ensures that modal sidebar stays above main content at all times.*/
@@ -405,7 +405,7 @@ function openNav() {
 	document.querySelectorAll('.animatableTransform').forEach(el => el.classList.add('transitionTransform')); // Apply class to get elements ready for transition.
 	setTimeout(function() {
 		document.querySelectorAll('.animatableTransform').forEach(el => el.classList.remove('transitionTransform'));
-	}, 1000);// Remove class to prevent unwanted transitions when zooming or resizing.
+	}, 500);// Remove class to prevent unwanted transitions when zooming or resizing.
 
  
 var mqls = [
@@ -461,7 +461,7 @@ function closeNav() {
 	document.querySelectorAll('.animatableTransform').forEach(el => el.classList.add('transitionTransform')); // Apply class to get elements ready for transition.
 	setTimeout(function() {
 		document.querySelectorAll('.animatableTransform').forEach(el => el.classList.remove('transitionTransform'));
-	}, 1000);// Remove class to prevent unwanted transitions when zooming or resizing.
+	}, 500);// Remove class to prevent unwanted transitions when zooming or resizing.
 
  
 var mqls = [
