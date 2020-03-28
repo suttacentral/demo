@@ -62,7 +62,7 @@ background-color: rgba(255,255,255,0.2);
 	z-index: 10;
 	/*Ensure that sidebar and topbar remain the same elevation, except when modal sidebar is active on small screens. Also, ensure that the shadow of the sidebar does not show where it butts ou against the topbar. */
 	background-color: white;
-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05), 2px 2px 2px rgba(0, 0, 0, 0.05), 4px 4px 4px rgba(0, 0, 0, 0.05), 8px 8px 8px rgba(0, 0, 0, 0.05);
+
 	transform: translateX(-300px);
 	/* Start with sidebar off the screen. Transitions are applied to this property. */
 }
@@ -468,7 +468,7 @@ function closeNav() {
 	document.getElementById("sidebar").style.transform = "translateX(-300px)"; // Move sidebar off page.
 	setTimeout(function() {
 		document.getElementById("sidebar").style.boxShadow = "none";
-	}, 500);
+	}, 200);
 
 
 	document.querySelectorAll('.animatableTransformX').forEach(el => el.classList.add('transitionTransformX')); // Apply class to get elements ready for transition.
